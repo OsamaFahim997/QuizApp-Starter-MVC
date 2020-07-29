@@ -12,6 +12,8 @@
 		E1CAFC7F225126CA003D740C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFC7D225126CA003D740C /* Main.storyboard */; };
 		E1CAFC81225126CC003D740C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFC80225126CC003D740C /* Assets.xcassets */; };
 		E1CAFC84225126CC003D740C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFC82225126CC003D740C /* LaunchScreen.storyboard */; };
+		F106371F24CB106E00C3EF94 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106371E24CB106E00C3EF94 /* AViewController.swift */; };
+		F1E8654124C8B21000794A0E /* QuizModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8654024C8B21000794A0E /* QuizModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E1CAFC80225126CC003D740C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1CAFC83225126CC003D740C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1CAFC85225126CC003D740C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F106371E24CB106E00C3EF94 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		F1E8654024C8B21000794A0E /* QuizModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		E1CAFC78225126CA003D740C /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				E1CAFC79225126CA003D740C /* AppDelegate.swift */,
-				E1CAFC7B225126CA003D740C /* ViewController.swift */,
-				E1CAFC7D225126CA003D740C /* Main.storyboard */,
-				E1CAFC80225126CC003D740C /* Assets.xcassets */,
-				E1CAFC82225126CC003D740C /* LaunchScreen.storyboard */,
-				E1CAFC85225126CC003D740C /* Info.plist */,
+				F1E8653F24C8B1F100794A0E /* OtherFiles */,
+				F1E8653E24C8B1E000794A0E /* Controller */,
+				F1E8653D24C8B1D900794A0E /* View */,
+				F1E8653C24C8B1CF00794A0E /* Modal */,
 			);
 			path = QuizApp;
+			sourceTree = "<group>";
+		};
+		F1E8653C24C8B1CF00794A0E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				F1E8654024C8B21000794A0E /* QuizModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		F1E8653D24C8B1D900794A0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1CAFC82225126CC003D740C /* LaunchScreen.storyboard */,
+				E1CAFC7D225126CA003D740C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1E8653E24C8B1E000794A0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1CAFC7B225126CA003D740C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1E8653F24C8B1F100794A0E /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F106371E24CB106E00C3EF94 /* AViewController.swift */,
+				E1CAFC79225126CA003D740C /* AppDelegate.swift */,
+				E1CAFC80225126CC003D740C /* Assets.xcassets */,
+				E1CAFC85225126CC003D740C /* Info.plist */,
+			);
+			path = OtherFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F106371F24CB106E00C3EF94 /* AViewController.swift in Sources */,
+				F1E8654124C8B21000794A0E /* QuizModal.swift in Sources */,
 				E1CAFC7C225126CA003D740C /* ViewController.swift in Sources */,
 				E1CAFC7A225126CA003D740C /* AppDelegate.swift in Sources */,
 			);
@@ -220,6 +260,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -274,6 +315,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -283,15 +325,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QuizApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QuizApp/OtherFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gwinyai.quizapp.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,15 +343,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QuizApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QuizApp/OtherFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gwinyai.quizapp.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
